@@ -34,5 +34,30 @@ class UseConstructors {
         // di default sia consistente (ossia che ci sia un numero positivo di
         // posti totali, e che la somma dei posti in prima e seconda classe dia
         // il totale dei posti sul treno).
+
+        Student marioRossi = new Student (1014, "Mario", "Rossi" , 2013);
+        Student lucaBianchi = new Student(1018, "Luca", "Bianchi", 2010);
+        Student peppinoVitiello = new Student(1019, "Peppino", "Vitiello", 2012);
+        Student lucaVerdi = new Student(1020, "Luca", "Verdi", 2013);
+
+        marioRossi.printStudentInfo();
+        lucaBianchi.printStudentInfo();
+        peppinoVitiello.printStudentInfo();
+        lucaVerdi.printStudentInfo();
+
+        Train primoTreno = new Train(300, 100, 200);
+        Train secondoTreno = new Train(1200, 50, 1050);
+        Train terzoTreno = new Train(500, 0, 500);
+        Train defaultTreno = new Train();
+
+        primoTreno.printTrainInfo();
+        secondoTreno.printTrainInfo();
+        terzoTreno.printTrainInfo();
+        defaultTreno.printTrainInfo();
+
+        IO.println(primoTreno.getTotalSeats() == primoTreno.getFirstClassSeats() + primoTreno.getSecondClassSeats());
+        IO.println(secondoTreno.getTotalSeats() == secondoTreno.getFirstClassSeats() + secondoTreno.getSecondClassSeats());
+        IO.println(terzoTreno.getTotalSeats() == terzoTreno.getFirstClassSeats() + terzoTreno.getSecondClassSeats());
+        IO.println(defaultTreno.getTotalSeats() == defaultTreno.getFirstClassSeats() + defaultTreno.getSecondClassSeats());
     }
 }
