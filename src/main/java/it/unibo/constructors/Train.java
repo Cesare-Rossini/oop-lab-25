@@ -18,10 +18,12 @@ class Train {
         this.secondClassSeats = secondClassSeats;
     }
 
+    Train(int nFCSeats, int nSCSeats) {
+        this(nFCSeats + nSCSeats, nFCSeats, nSCSeats);
+    }
+
     Train (){
-        this.seats = 100;
-        this.firstClassSeats = 10;
-        this.secondClassSeats = 90;
+        this(100, 10, 90);
     }
 
     void deleteAllReservations() {

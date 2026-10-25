@@ -10,5 +10,9 @@ class UseConstructorsEvolved {
         // nSCSeats)
         // - nFCSeats = 20; nSCSeats= 200;
         // - nFCSeats = 35; nSCSeats= 165;
+
+        Train defaultTreno = new Train();
+        Train primoTreno = new Train(20, 200);
+        Train secondoTreno = new Train(35, 165);
     }
 }
